@@ -1,12 +1,13 @@
 const users = require("../models").users;
 const bcrypt = require('bcrypt');
+const { USER_EXIST, USER_NOT_EXIST } = require("../constants");
 
 exports.createUser = async (req, res) => {
   const hash = bcrypt.hashSync(req.body.password, 10);
 try {
   const user = await this.findUser(req, res, req.body.username)
   
-  if (user) throw new Error('Ya existe el usuario');
+  if (user) throw new Error(USER_EXIST);
 
   return users
     .create({
@@ -42,7 +43,7 @@ exports.findUser = async (req, res, usernameLogin) => {
         
 
         if(req.params.username){         
-          if(users === null) res.status(400).send('No existe el usuario')
+          if(users === null) res.status(400).send(USER_NOT_EXIST)
           res.status(200).send(users.dataValues);
         } else{   
           if(users === null) return null;       

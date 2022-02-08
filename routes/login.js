@@ -1,7 +1,8 @@
+const { LOGIN, SIGNIN, LOGOUT } = require('../constants');
 const loginController = require('../controllers/login');
 
 module.exports = (app) => {     
-   app.post('/login', loginController.loginUser);
-   app.post('/signin', loginController.signInUser);
-   app.put('/logout', loginController.logoutUser);
+   app.post(LOGIN, loginController.loginUser);
+   app.post(SIGNIN, loginController.signInUser);
+   app.put(LOGOUT, loginController.logoutUser);
 };

@@ -18,10 +18,12 @@ module.exports = {
         allowNull: false,
       },
       team: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        defaultValue: '25'
       },
       avatar: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        defaultValue: '0'        
       },
       createdAt: {
         allowNull: false,
