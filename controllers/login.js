@@ -50,13 +50,11 @@ const getToken = (id) => jwt.sign({ id }, 'poke_secret', { expiresIn: '2h' });
 exports.logoutUser = (req, res) => {
 
   const authHeader = req.headers["authorization"];
-
+  
   jwt.sign(authHeader, "", { expiresIn: 1 } , (logout, err) => {
-     if (logout) {
+     
         res.status(200).send('Has sido desconectado');
-     } else {
-        res.status(400).send('Error');
-     }
+    
   });
 
 };

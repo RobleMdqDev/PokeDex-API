@@ -41,8 +41,8 @@ To install dependencies, run
 ```
     {
         username: `Usuario 0`,       
-        password: "1234567",
-        team: [],
+        password: "1234",
+        team: '12-25-69-85-63-400',
         avatar:
           "https://media.istockphoto.com/photos/portrait-of-happy-indian-man-smiling-at-home-picture-id1270067432",
         createdAt: new Date(),
