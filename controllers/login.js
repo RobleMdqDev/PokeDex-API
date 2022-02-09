@@ -50,11 +50,12 @@ exports.signInUser = async (req, res) => {
     if (userFind) {
       return res.send({ message: USER_EXIST });
     }
+    const newUser = await createUser(req, res);   
 
-    const user = await createUser(req, res);
+    const token = getToken(newUser.dataValues.id);
 
-    const token = getToken(user.dataValues.id);
-
+    const user = await findUser(req, res, username);
+    
     res.json({ status: "OK", user, token });
   } catch (error) {
     res.send({ message: error.message, status: 400 });

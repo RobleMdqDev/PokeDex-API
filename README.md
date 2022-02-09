@@ -1,5 +1,6 @@
-# Server Base - Proyecto PokedexApp By Alberto Nicolas Robledo
+# Proyecto PokedexApp By Alberto Nicolas Robledo
 
+Contact: [Linkedin](https://www.linkedin.com/in/albertorobledomdq/). Email: Robledo.mdp@gmail.com.
 
 ## Envinroment setup
 
