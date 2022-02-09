@@ -13,8 +13,6 @@ try {
     .create({
       username: req.body.username,
       password: hash,
-      // team: '',
-      // avatar: '0'
     })
     .then((data) => data)
     

@@ -2,6 +2,13 @@
 
 Contact: [Linkedin](https://www.linkedin.com/in/albertorobledomdq/). Email: Robledo.mdp@gmail.com.
 
+NodeJS   
+Sequileze  
+Express  
+MySql   
+Jason Web Token
+
+
 ## Envinroment setup
 
 1) Copy .env.example to .env and fill with database credentials.
